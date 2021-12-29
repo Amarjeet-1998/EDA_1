@@ -1,0 +1,81 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1509539265742" ID="ID_1849168657" MODIFIED="1528389503722" TEXT="Clustering">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1474387673363" ID="ID_738690791" MODIFIED="1526200461714" POSITION="right" TEXT="Evaluation">
+<node CREATED="1474388283983" ID="ID_2961517" MODIFIED="1474388386109" TEXT="Success">
+<node CREATED="1474388298927" ID="ID_1258764987" MODIFIED="1474388305186" TEXT="Label the clusters"/>
+</node>
+<node CREATED="1474388384724" ID="ID_1060984909" MODIFIED="1474388409727" TEXT="Reduce the number of rows / records / observations"/>
+</node>
+<node CREATED="1474387685187" ID="ID_490845612" MODIFIED="1526201410100" POSITION="left" TEXT="Hierarchical clustering">
+<node CREATED="1474387727740" ID="ID_760401863" MODIFIED="1474387747781" TEXT="each record is a cluster"/>
+<node CREATED="1474387749774" ID="ID_1219152869" MODIFIED="1474389331918" TEXT="Similarity (Distance)">
+<node CREATED="1474387894089" ID="ID_40947044" MODIFIED="1494130915372" TEXT="distance between records">
+<node CREATED="1474387772410" ID="ID_1572704272" MODIFIED="1474387780717" TEXT="numerical">
+<node CREATED="1474387782032" ID="ID_249824112" MODIFIED="1474387795504" TEXT="Euclidean"/>
+<node CREATED="1474387796579" ID="ID_591341724" MODIFIED="1474387800380" TEXT="Manhattan"/>
+<node CREATED="1474387801296" ID="ID_266010494" MODIFIED="1474387807800" TEXT="Mahalonbois"/>
+</node>
+<node CREATED="1474387815769" ID="ID_411162927" MODIFIED="1474387950142" TEXT="categorical">
+<node CREATED="1474387821789" ID="ID_1174603299" MODIFIED="1474387827807" TEXT="binary">
+<node CREATED="1474387828849" ID="ID_1387464968" MODIFIED="1474387834685" TEXT="Binary euclidean">
+<node CREATED="1509540669754" ID="ID_1074301801" MODIFIED="1509540688786" TEXT="capturing dissimilarity between records "/>
+</node>
+<node CREATED="1494130942097" ID="ID_1156017977" MODIFIED="1494130947602" TEXT="simple matching coefficient">
+<node CREATED="1509540691094" ID="ID_284230805" MODIFIED="1509540702888" TEXT="capturing similarity between records"/>
+</node>
+<node CREATED="1474387835984" ID="ID_1500533906" MODIFIED="1474387843600" TEXT="Jaquards coefficients">
+<node CREATED="1509540704429" ID="ID_877318911" MODIFIED="1509540730567" TEXT="atleast 1 similarity should exist between records"/>
+</node>
+</node>
+<node CREATED="1474387848672" ID="ID_1669056964" MODIFIED="1494131044517" TEXT="&gt; 2 caterogries">
+<node CREATED="1474387861687" ID="ID_1182168044" MODIFIED="1474387874328" TEXT="similar values, dist =0"/>
+<node CREATED="1474387875755" ID="ID_769763539" MODIFIED="1474387881043" TEXT="non similar values, dist = 1"/>
+</node>
+</node>
+<node CREATED="1474387930565" ID="ID_434354819" MODIFIED="1474387938474" TEXT="numerical and categorical">
+<node CREATED="1474387939801" ID="ID_732762025" MODIFIED="1511838974044" TEXT="Gower&apos;s coefficients, Wijk = 0 (if same category) or  = 1(if different category)"/>
+<node CREATED="1494131098972" ID="ID_1883354382" MODIFIED="1494131120870" TEXT="(Xi-Xmin) / (Xmax - Xmin)">
+<node CREATED="1530353670948" ID="ID_858186463" MODIFIED="1530353696729" TEXT="Normalization (range of the data is brought to 0-1)"/>
+</node>
+<node CREATED="1494131073774" ID="ID_1364219535" MODIFIED="1494131146421" TEXT="normalize the numerical data to get range =1 which will be equal to the range of dummy variables"/>
+</node>
+</node>
+<node CREATED="1474387920610" ID="ID_1745238588" MODIFIED="1494131227316" TEXT="distance between record n group / group n group">
+<node CREATED="1474387978543" ID="ID_993754391" MODIFIED="1474387996659" TEXT="Single linkage">
+<node CREATED="1474387997646" ID="ID_1670575508" MODIFIED="1474388007700" TEXT="Nearest neighbour distance"/>
+</node>
+<node CREATED="1474388010269" ID="ID_1401229625" MODIFIED="1474388014236" TEXT="Complete linkage">
+<node CREATED="1474388015006" ID="ID_657814017" MODIFIED="1474388024134" TEXT="Farthest neighbour distance"/>
+</node>
+<node CREATED="1474388026024" ID="ID_1991358995" MODIFIED="1530353731371" TEXT="Average linkage">
+<node CREATED="1509540956479" ID="ID_1309667764" MODIFIED="1509540962139" TEXT="average of all the distances"/>
+</node>
+<node CREATED="1474388036261" ID="ID_845269589" MODIFIED="1474388043496" TEXT="Centroid linkage">
+<node CREATED="1509540963872" ID="ID_1066960138" MODIFIED="1509540972409" TEXT="distance between centers of the clusters"/>
+</node>
+</node>
+</node>
+<node CREATED="1474388055087" ID="ID_268882961" MODIFIED="1474388070839" TEXT="Cluster Dendrogram">
+<node CREATED="1494131266788" ID="ID_1780858947" MODIFIED="1494131282203" TEXT="tree like diagram which summarizes clustering process"/>
+<node CREATED="1511833013997" ID="ID_1077294505" MODIFIED="1511833068910" TEXT="By looking at cluster dendrogram, we decide on how many clusters suite the given requirement"/>
+</node>
+</node>
+<node CREATED="1474387711212" ID="ID_1647631889" MODIFIED="1528389494570" POSITION="right" TEXT="Non-Hierarchical Clustering (k-means)">
+<node CREATED="1474388103329" ID="ID_1204803966" MODIFIED="1474388119046" TEXT="number of clusters is determined upfront">
+<node CREATED="1474388119591" ID="ID_1944336735" MODIFIED="1474388127129" TEXT="sqrt(n/2)"/>
+<node CREATED="1474388129472" ID="ID_33334189" MODIFIED="1490837271843" TEXT="Scree plot / elbow curve"/>
+<node CREATED="1509632233264" ID="ID_711124029" MODIFIED="1509632238099" TEXT="kselection"/>
+</node>
+<node CREATED="1474388144706" ID="ID_1566652615" MODIFIED="1474388210884" TEXT="WithinSS">
+<node CREATED="1474388152289" ID="ID_474345375" MODIFIED="1474388187899" TEXT="Similarity between records within a cluster"/>
+<node CREATED="1474388192251" ID="ID_114583730" MODIFIED="1474388202627" TEXT="Less the distance = more the similarity"/>
+</node>
+<node CREATED="1474388212051" ID="ID_848773396" MODIFIED="1474388218058" TEXT="BetweenSS">
+<node CREATED="1474388218678" ID="ID_1731981819" MODIFIED="1474388257503" TEXT="Dissimilarity between records of different clusters"/>
+<node CREATED="1474388258235" ID="ID_326537237" MODIFIED="1474388276664" TEXT="More the distance = less the similarity = better the grouping"/>
+</node>
+</node>
+</node>
+</map>
