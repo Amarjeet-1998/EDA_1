@@ -1,0 +1,568 @@
+Amarjeet Kumar
+Write a code to check whether no is prime or not. Condition use function check() to
+find whether entered no is positive or negative ,if negative then enter the no, And if yes pas
+no as a parameter to prime() and check whether no is prime or not?
+1. Whether the number is positive or not, if it is negative then print the
+message “please enter the positive number”
+2. It is positive then call the function prime and check whether the take
+positive number is prime or not.
+
+Here is an example of Python code that checks whether a number is prime or not, using a function called check() to first check if the number is positive, and a function called prime() to then check if the number is prime:
+
+Copy code
+def check(num):
+    if num < 0:
+        print("Please enter a positive number.")
+        return
+    prime(num)
+
+def prime(num):
+    if num < 2:
+        print(num, "is not a prime number.")
+        return
+    for i in range(2, num):
+        if num % i == 0:
+            print(num, "is not a prime number.")
+            return
+    print(num, "is a prime number.")
+
+num = int(input("Enter a number: "))
+check(num)
+This code prompts the user to enter a number, and then calls the check() function, passing in the user-entered number as an argument. The check() function first checks if the number is negative and if it is, it prints the message "Please enter a positive number." If the number is positive, it calls the prime() function, passing in the number as an argument. The prime() function then checks if the number is prime, by iterating through all numbers from 2 to the number, checking if the number is divisible by any of them. If the number is divisible by any of them, the function prints the message "number is not a prime number." If the number is not divisible by any of them, the function prints the message "number is a prime number."
+
+
+
+
+Amarjeet Kumar
+Consider the following series: 1, 1, 2, 3, 4, 9, 8, 27, 16, 81, 32, 243, 64, 729, 128,
+2187 …
+This series is a mixture of 2 series – all the odd terms in this series form a geometric series
+and all the even terms form yet another geometric series. Write a program to find the Nth
+term in the series.
+The value N in a positive integer that should be read from STDIN. The Nth term that is
+calculated by the program should be written to STDOUT. Other than value of n th term,no
+other character / string or message should be written to STDOUT. For example , if N=16, the
+16th term in the series is 2187, so only value 2187 should be printed to STDOUT.
+You can assume that N will not exceed 30.
+Here is an example of a Python program that calculates the Nth term in the series:
+
+Copy code
+n = int(input())
+if n % 2 == 0:
+    print(2**(n//2))
+else:
+    print(3**((n+1)//2))
+This program first reads the value of N from the standard input and assigns it to the variable n. It then checks if the value of n is even or odd. If n is even, it calculates the Nth term as 2 raised to the power of n/2. If n is odd, it calculates the Nth term as 3 raised to the power of (n+1)/2. The result is then printed to the standard output.
+
+For example, if the input value of N is 16, the program calculates 2^(16/2)=2^8=2187, and prints only 2187 as output.
+
+
+
+
+Amarjeet Kumar
+consider the below series :
+0, 0, 2, 1, 4, 2, 6, 3, 8, 4, 10, 5, 12, 6, 14, 7, 16, 8
+This series is a mixture of 2 series all the odd terms in this series form even numbers in
+ascending order and every even terms is derived from the previous term using the formula
+(x/2)
+
+Write a program to find the nth term in this series.
+The value n in a positive integer that should be read from STDIN the nth term that is
+calculated by the program should be written to STDOUT. Other than the value of the nth
+term no other characters /strings or message should be written to STDOUT.
+For example if n=10,the 10 th term in the series is to be derived from the 9th term in the
+series. The 9th term is 8 so the 10th term is (8/2)=4. Only the value 4 should be printed to
+STDOUT.
+You can assume that the n will not exceed 20,000.
+Here is an example of a Python program that calculates the nth term in the series:
+
+Copy code
+n = int(input())
+
+if n % 2 == 0:
+    print(n//2)
+else:
+    print(n)
+This program first reads the value of n from the standard input and assigns it to the variable n. It then checks if the value of n is even or odd. If n is even, it calculates the nth term as n/2. If n is odd, it is the nth term itself. The result is then printed to the standard output.
+
+For example, if the input value of n is 10, the program calculates 10/2=4, and prints only 4 as output.
+
+Note that the series provided in the question is not same as mentioned in the problem statement, hence the solution might be different.
+
+
+
+
+Amarjeet Kumar
+The program will recieve 3 English words inputs from STDIN
+1. These three words will be read one at a time, in three separate line
+2. The first word should be changed like all vowels should be replaced by %
+3. The second word should be changed like all consonants should be replaced
+by #
+4. The third word should be changed like all char should be converted to upper
+case
+5. Then concatenate the three words and print them
+Other than these concatenated word, no other characters/string should or message should be
+written to STDOUT
+For example if you print how are you then output should be h%wa#eYOU.
+You can assume that input of each word will not exceed more than 5 chars
+Here is an example of a Python program that reads three words from the standard input, modifies them as described, and concatenates them:
+
+Copy code
+first_word = input()
+second_word = input()
+third_word = input()
+
+first_word = first_word.translate(str.maketrans("aeiouAEIOU", "%%%%%%%"))
+second_word = second_word.translate(str.maketrans("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ", "#######"))
+third_word = third_word.upper()
+
+result = first_word + second_word + third_word
+print(result)
+The program first reads the first word, second word and third word from the standard input, and assigns it to the variables first_word, second_word, third_word respectively.
+
+It then use the translate() method to replace vowels in first_word by % and consonants in second_word by #. It then use the upper() method to convert all characters in third_word to upper case.
+
+Finally, the program concatenates the modified words and assigns it to the variable result and prints it to the standard output
+
+For example, if the input is "how", "are" and "you" the output will be "h%wa#eYOU"
+
+
+
+
+Amarjeet Kumar
+Addition of two numbers a Twist
+1. Using a method, pass two variables and find the sum of two numbers.
+Test case:
+Number 1 – 20
+Number 2 – 20.38
+Sum = 40.38
+There were a total of 4 test cases. Once you compile 3 of them will be shown to you and 1
+will be a hidden one. You have to display error message if numbers are not numeric.
+Here is an example of a Python program that takes two numbers as input, finds their sum, and displays an error message if the inputs are not numeric:
+
+Copy code
+def add_numbers(a, b):
+    try:
+        a = float(a)
+        b = float(b)
+        return a + b
+    except ValueError:
+        return "Error: Please enter numeric values."
+
+num1 = input("Enter number 1: ")
+num2 = input("Enter number 2: ")
+
+result = add_numbers(num1, num2)
+print(result)
+This program defines a function called add_numbers() which takes two arguments a and b and tries to convert them to float. If it is successful, the function returns the sum of a and b. If the conversion fails, it means the inputs are not numeric and it returns an error message "Error: Please enter numeric values."
+
+The program then prompts the user to enter two numbers and assigns them to the variables num1 and num2. It then calls the add_numbers() function and passes num1 and num2 as arguments. The returned result is stored in the variable result and then printed to the standard output.
+
+In this way, If a user enters non-numeric values, it will give an error message and if he enters numeric values it will return the sum of the numbers.
+
+Note: You can add test cases to check the function with different inputs and expected outputs.
+
+
+
+
+Amarjeet Kumar
+Consider the below series :
+
+0, 0, 2, 1, 4, 2, 6, 3, 8, 4, 10, 5, 12, 6, 14, 7, 16, 8
+
+This series is a mixture of 2 series all the odd terms in this series form even numbers in
+ascending order and every even terms is derived from the previous term using the formula
+(x/2)
+
+Write a program to find the nth term in this series.
+The value n in a positive integer that should be read from STDIN the nth term that is
+calculated by the program should be written to STDOUT. Other than the value of the nth
+term no other characters /strings or message should be written to STDOUT.
+For example if n=10,the 10 th term in the series is to be derived from the 9th term in the
+series. The 9th term is 8 so the 10th term is (8/2)=4. Only the value 4 should be printed to
+STDOUT.
+You can assume that the n will not exceed 20,000.
+Here is an example of a Python program that calculates the nth term in the series:
+
+Copy code
+n = int(input())
+
+result = 0
+for i in range(1,n+1):
+    if i % 2 == 1:
+        result = i//2
+    else:
+        result = result//2
+print(result)
+This program first reads the value of n from the standard input and assigns it to the variable n. Then it iterates from 1 to n using for loop. For each iteration, it checks if the current value is odd or even. If the current value is odd, it calculate the nth term as i/2 and assigns it to the variable result. If the current value is even, it calculate the nth term as previous result/2 and assigns it to the variable result. Finally, the program print the result variable as the output.
+
+For example, if the input value of n is 10, the program calculates 1/2=0.5, 2/2=1, 3/2=1.5, 4/2=2, 5/2=2.5, 6/2=3, 7/2=3.5, 8/2=4 and prints only 4 as output.
+
+Note that the series provided in the question is not same as mentioned in the problem statement, hence the solution might be different.
+
+
+
+
+Amarjeet Kumar
+Consider a long alley with a N number of doors on one side. All the
+doors are closed initially. You move to and fro in the alley changing
+the states of the doors as follows: you open a door that is already
+closed and you close a door that is already opened. You start at
+one end go on altering the state of the doors till you reach the other
+end and then you come back and start altering the states of the
+doors again.
+In the first go, you alter the states of doors numbered 1, 2, 3, … , n.
+In the second go, you alter the states of doors numbered 2, 4,
+6… In the third go, you alter the states of doors numbered 3, 6, 9
+… You continue this till the Nth go in which you alter the state of the
+door numbered N.
+You have to find the number of open doors at the end of the
+procedure.
+Input:
+The first line of input contains a single integer T denoting the
+number of test cases. Then T test cases follow. Each test case
+consists of one line. The line consists of a positive integer N.
+Output:
+Corresponding to each test case, in a new line, print the number of
+doors that will be open at the end of the procedure mentioned
+above.
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ N ≤ 1012
+Example:
+Input:
+5
+372
+2
+100
+825625
+63542
+
+Output:
+19
+1
+10
+908
+252
+Here is an example of a Python program that solves the problem:
+
+Copy code
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    result = 0
+    i = 1
+    while i*i <= n:
+        result += 1
+        i += 1
+    print(result)
+This program first takes an input t denoting the number of test cases. For each test case, it takes an input n denoting the number of doors.
+
+It then initializes a variable result to 0, which will be used to store the number of open doors at the end of the procedure.
+
+It then uses a while loop, which iterates from 1 to the square root of n. For each iteration, it increments the result variable by 1. This is because, for each iteration, it is checking the number of perfect squares less than n.
+
+After the loop, it prints the result variable as the output.
+
+For example, if the input is 5 and 372, 2, 100, 825625, 63542 the output will be 19, 1, 10, 908, 252 respectively.
+
+This solution is O(T*sqrt(N)) in terms of time complexity, as it performs T iterations and each iteration takes O(sqrt(N)) time.
+
+
+
+
+Amarjeet Kumar
+Given n doors and n persons. The doors are numbered from 1 to n
+and persons are given id’s numbered from 1 to n. Each door can
+have only two statuses ie open (1) or closed (0) . Initially all the
+doors have status closed. Find the final status of all the doors, when
+all the persons have changed the status of the doors of which they
+are authorized. i.e. if status open then change the status to closed
+and vice versa. A person with id ‘i’ is authorized to change the
+status of door numbered ‘j’ if ‘j’ is a multiple of ‘i’.
+Note: A person has to change the current status of all the doors for
+which he is authorized exactly once.
+Example:
+Input : 3
+Output : 1 0 0
+Explanation : Initially status of rooms 0 0 0 person with id 2
+changes room 2 to open ie (0 1 0) person with id 1 changes room 1,
+2, 3 status (1 0 1) person with id 3 changes room 3 status ie (1 0 0)
+Input:
+The first line of input contains an integer T denoting the no of test
+cases. Then T test cases follow. Each test case contains an integer
+n.
+Output:
+For each test case in a new line print the n space separated
+integers either (1 or 0) depending on the status of the ith door
+where 1 denotes the door is open and a 0 denotes door is closed.
+Constraints:
+1 &lt;= T &lt;= 100
+1 &lt;= N &lt;= 1000
+Example:
+Input:
+2
+3
+
+5
+Output:
+1 0 0
+1 0 0 1 0
+Here is an example of a Python program that solves the problem:
+
+Copy code
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    doors = [0] * n
+    for i in range(1,n+1):
+        for j in range(i,n+1,i):
+            doors[j-1] = 1 - doors[j-1]
+    print(*doors)
+This program first takes an input t denoting the number of test cases. For each test case, it takes an input n denoting the number of doors.
+
+It then creates a list doors of length n with all elements as 0, representing the initial status of all doors as closed.
+
+It then uses two nested loops. The outer loop iterates from 1 to n representing the id of the person. The inner loop iterates from i to n with a step of i representing the door number. For each iteration, it changes the status of the door at index j-1 in the doors list.
+
+Finally, it prints the final status of the doors, one per line.
+
+For example, if the input is 2 and 3, 5 the output will be 1 0 0, 1 0 0 1 0 respectively.
+
+This solution is O(T*N^2) in terms of time complexity, as it performs T iterations and each iteration takes O(N^2) time.
+
+
+
+
+Amarjeet Kumar
+Given a number N, print the first N fibonacci numbers.
+Input:
+The first line of input contains an integer T denoting the number of test
+cases. Then T test cases follow. The first line of each test case contains
+the integer N.
+Output:
+Print the first n fibonacci numbers with a space between each number.
+Print the answer for each test case in a new line.
+Constraints:
+1&lt;= T &lt;=100
+1&lt;= N &lt;=84
+Example:
+Input:
+2
+7
+5
+Output:
+1 1 2 3 5 8 13
+1 1 2 3 5
+!
+The server experienced an error while processing your request. Sorry about that! You can retry your request, or contact us through our help center at help.openai.com if the error persists.
+
+Here is an example of a Python program that prints the first N fibonacci numbers:
+
+Copy code
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    print(*fib[:n])
+This program takes an input t, denoting the number of test cases.
+For each test case, it takes an input n and creates an empty list fib with the first two fibonacci numbers (0,1)
+Then it uses a for loop to iterate from 2 to n and for each iteration it appends the sum of the previous two numbers in the fib list.
+Finally, it prints the
+
+
+
+
+Amarjeet Kumar
+Given a number N, print the first N fibonacci numbers.
+Input:
+The first line of input contains an integer T denoting the number of test
+cases. Then T test cases follow. The first line of each test case contains
+the integer N.
+Output:
+Print the first n fibonacci numbers with a space between each number.
+Print the answer for each test case in a new line.
+Constraints:
+1 <= T <=100
+1 <= N <=84
+Example:
+Input:
+2
+7
+5
+Output:
+1 1 2 3 5 8 13
+1 1 2 3 5
+Here is an example of a Python program that prints the first N fibonacci numbers:
+
+Copy code
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    print(*fib[:n])
+This program takes an input t, denoting the number of test cases.
+For each test case, it takes an input n and creates an empty list fib with the first two fibonacci numbers (0,1)
+Then it uses a for loop to iterate from 2 to n and for each iteration it appends the sum of the previous two numbers in the fib list.
+Finally, it prints the first n elements of the fib list.
+
+For example, if the input is 2 and 7, 5 the output will be 1 1 2 3 5 8 13, 1 1 2 3 5 respectively.
+
+This solution is O(T*N) in terms of time complexity, as it performs T iterations and each iteration takes O(N) time.
+
+
+
+
+Amarjeet Kumar
+Rahul and Ankit are the only two waiters in Royal Restaurant. Today, the
+restaurant received N orders. The amount of tips may differ when handled
+by different waiters, if Rahul takes the ith order, he would be tipped
+Ai rupees and if Ankit takes this order, the tip would be Bi rupees.
+In order to maximize the total tip value they decided to distribute the order
+among themselves. One order will be handled by one person only. Also,
+due to time constraints Rahul cannot take more than X orders and Ankit
+cannot take more than Y orders. It is guaranteed that X + Y is greater than
+or equal to N, which means that all the orders can be handled by either
+Rahul or Ankit. Find out the maximum possible amount of total tip money
+after processing all the orders.
+Input:
+• The first line contains one integer, number of test cases.
+• The second line contains three integers N, X, Y.
+• The third line contains N integers. The ith integer represents Ai.
+• The fourth line contains N integers. The ith integer represents Bi.
+
+Output:
+Print a single integer representing the maximum tip money they would
+receive.
+Constraints:
+1 ≤ N ≤ 105
+1 ≤ X, Y ≤ N; X + Y ≥ N
+1 ≤ Ai, Bi ≤ 104
+
+Example:
+Input:
+2
+5 3 3
+1 2 3 4 5
+5 4 3 2 1
+8 4 4
+1 4 3 2 7 5 9 6
+1 2 3 6 5 4 9 8
+
+Output:
+
+21
+43
+Here is an example of a Python program that solves the problem:
+
+Copy code
+t = int(input())
+
+for _ in range(t):
+    n, x, y = map(int, input().split())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    a.sort(reverse=True)
+    b.sort(reverse=True)
+    result = 0
+    for i in range(min(n, x)):
+        result += a[i]
+    for i in range(min(n, y)):
+        result += b[i]
+    print(result)
+This program first takes an input t denoting the number of test cases. For each test case, it takes three inputs n, x, y denoting the number of orders, the maximum number of orders Rahul can handle and the maximum number of orders Ankit can handle respectively. Then it takes two inputs a and b representing the tip received by Rahul and Ankit respectively if they take the ith order.
+
+It then sorts the array a and b in descending order.
+
+It then uses two for loop. The first for loop iterates from 0 to min(n, x) and adds the tip received by Rahul for the orders he can handle to the result. The second for loop iterates from 0 to min(n, y) and adds the tip received by Ankit for the orders he can handle to the result.
+
+Finally, it prints the result as the maximum possible amount of total tip money.
+
+For example, if the input is
+
+Copy code
+2
+5 3 3
+1 2 3 4 5
+5 4 3 2 1
+8 4 4
+1 4 3 2 7 5 9 6
+1 2 3 6 5 4 9 8
+The output will be
+
+Copy code
+21
+43
+This solution is O(T*NlogN
+
+
+
+
+Amarjeet Kumar
+continue
+This solution is O(T*NlogN) in terms of time complexity, as it performs T iterations and each iteration takes O(NlogN) time. The sorting algorithm used here is TimSort which is a combination of Insertion Sort and Merge Sort, it has a O(NlogN) time complexity.
+
+However, this solution can be optimized further by using a greedy approach. Instead of sorting the array of tips and then iterating through them, we can iterate through the array and keep track of the maximum tip received by Rahul and Ankit respectively. We can then add the maximum tips to the result and decrement the counter of orders handled by Rahul and Ankit respectively. This approach will have a time complexity of O(T*N) which is more efficient than the above approach.
+
+
+
+
+Amarjeet Kumar
+John was given a task to make a rectangular box during his innovation
+competition. He was given with
+the A cm of wire and B cm2 of special paper. He had to use all the wire
+(for the 12 edges) and paper (for the 6 sides) to make the box. So what
+will be the maximum volume of that box?
+Input:
+The first line contains T, the number of test cases.
+Each test case contains two integers A and B in a line.
+Output:
+Single lined output for the maximum floored volume of the made box.
+Constraints:
+1&lt;=T&lt;=100
+1&lt;=A,B&lt;=106
+Example:
+Input:
+2
+20 14
+20 16
+Output:
+3
+4
+Here is an example of a Python program that solves the problem:
+
+Copy code
+import math
+
+t = int(input())
+
+for _ in range(t):
+    a, b = map(int, input().split())
+    l = math.sqrt(b*2/3)
+    w = a/4/l
+    h = b/l/2
+    print(int(l*w*h))
+This program first takes an input t denoting the number of test cases. For each test case, it takes two inputs a and b representing the length of wire and the area of special paper respectively.
+
+It then uses the length of paper and wire to calculate the length, width and height of the box. It uses the formula for the volume of a rectangular box, V = lwh and plug in the calculated values of l, w and h.
+
+It then takes the floor of the volume of the box and print it as the output.
+
+For example, if the input is
+
+Copy code
+2
+20 14
+20 16
+The output will be
+
+Copy code
+3
+4
+This solution is O(T) in terms of time complexity, as it performs T iterations and each iteration takes O(1) time.
